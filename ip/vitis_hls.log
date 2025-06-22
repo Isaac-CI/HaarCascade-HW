@@ -1,0 +1,71 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'lsi2515' on host 'lsi2515' (Linux_x86_64 version 5.15.0-141-generic) on Tue Jun 10 22:44:58 -03 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project -reset haarcascadedetection.prj 
+INFO: [HLS 200-10] Opening and resetting project '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj'.
+INFO: [HLS 200-1510] Running: add_files /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/face_detection.cpp -cflags -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common -I./ -D__SDSVHLS__ -std=c++14 -csimflags -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common -I./ -D__SDSVHLS__ -std=c++14 
+INFO: [HLS 200-10] Adding design file '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/face_detection.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haar_cascade.cpp -cflags -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common -I./ -D__SDSVHLS__ -std=c++14 -csimflags -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common -I./ -D__SDSVHLS__ -std=c++14 
+INFO: [HLS 200-10] Adding design file '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haar_cascade.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/tb_face_detection.cpp -cflags   -I/home/lsi2515/opencv_build/source/install/include/opencv4 -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I ./ -D__SDSVHLS__ -std=c++14 -csimflags -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include -I/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common -I./ -D__SDSVHLS__ -std=c++14 
+INFO: [HLS 200-10] Adding test bench file '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/tb_face_detection.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top face_detection_ip 
+INFO: [HLS 200-1510] Running: open_solution -reset sol1 
+INFO: [HLS 200-10] Creating and opening solution '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcu55c-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu55c-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.3 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 275.281 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haar_cascade.cpp' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_reshape' is ignored (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_video_mem.hpp:759:47)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haar_cascade.cpp:14:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haar_cascade.cpp
+Resolution: For help on HLS 200-471 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+WARNING: [HLS 207-5292] unused parameter 'src' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:517:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:528:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:541:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:552:20)
+WARNING: [HLS 207-5292] unused parameter 'stride' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1036:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1224:102)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1530:34)
+INFO: [HLS 200-10] Analyzing design file '/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/face_detection.cpp' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_reshape' is ignored (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_video_mem.hpp:759:47)
+WARNING: [HLS 207-5292] unused parameter 'src' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:517:30)
+WARNING: [HLS 207-5292] unused parameter '_data' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:528:30)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:541:14)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:552:20)
+WARNING: [HLS 207-5292] unused parameter 'stride' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1036:41)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1224:102)
+WARNING: [HLS 207-5292] unused parameter 'index' (/home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/include/common/xf_structs.hpp:1530:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 72.37 seconds. CPU system time: 2.84 seconds. Elapsed time: 75.64 seconds; current allocated memory: 301.020 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 21,769 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 7,374,597 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 3,262,730 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 3,143,178 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 3,102,617 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,995,821 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,995,821 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,995,821 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,995,821 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,995,835 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 2,938,177 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details: /home/lsi2515/Documents/Franklin/Vitis_Libraries-2023.2/vision/L1/examples/haarcascadedetection/ip/haarcascadedetection.prj/sol1/syn/report/csynth_design_size.rpt
